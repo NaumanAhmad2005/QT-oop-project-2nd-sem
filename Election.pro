@@ -1,9 +1,16 @@
-QT       += core gui
-QT += core gui sql
-QT += charts
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+QT += core gui sql charts widgets
 
-CONFIG += c++17
+CONFIG += c++11 c++17
+CONFIG += app_bundle target_app
+
+TARGET = Election
+TEMPLATE = app
+
+# Prevent shadow build issues
+MOC_DIR = .moc
+OBJECTS_DIR = .obj
+RCC_DIR = .rcc
+UI_DIR = .ui
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -57,7 +64,17 @@ FORMS += \
 
 INCLUDEPATH += $$PWD/include
 
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+# Resource files
+RESOURCES += resources.qrc
+
+# Windows-specific: Create executable (not console app)
+win32:CONFIG += console
+
+# macOS: Set up application bundle
+macx:CONFIG += app_bundle
+
+# Deployment paths
+unix:!macx:!android {
+    target.path = /usr/bin
+    INSTALLS += target
+}

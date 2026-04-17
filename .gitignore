@@ -18,6 +18,12 @@ release/
 Debug/
 Release/
 
+# Qt Creator build artifacts (new structure)
+.moc/
+.obj/
+.rcc/
+.ui/
+
 # Compiled files
 *.o
 *.obj
@@ -55,10 +61,8 @@ Thumbs.db
 *.qtc-*.user
 share/
 
-# Database files (if contains sensitive data)
-*.db
-*.sqlite
-*.sqlite3
+# Database files in root (build folder databases are already ignored)
+/project.db
 
 # Temporary files
 *.tmp

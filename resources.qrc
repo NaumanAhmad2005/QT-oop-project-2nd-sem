@@ -1,0 +1,10 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+    <qresource prefix="/">
+        <!-- Add application resources here -->
+        <!-- Example:
+        <file>resources/icons/app_icon.png</file>
+        <file>resources/images/logo.png</file>
+        -->
+    </qresource>
+</RCC>
