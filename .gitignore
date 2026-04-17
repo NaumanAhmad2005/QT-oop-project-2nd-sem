@@ -1,0 +1,71 @@
+# Qt files
+*.pro.user
+*.qmlproject
+*.qmlproject.user
+*.creator
+*.creator.user
+*.config
+*.files
+*.includes
+*.codestyle
+
+# Build directories
+build/
+Build/
+BUILD/
+debug/
+release/
+Debug/
+Release/
+
+# Compiled files
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.app
+
+# Makefiles
+Makefile*
+makefile*
+
+# Qmake generated
+.ui.h
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Qt Creator specific
+*.qmlproject.user
+*.qtc-*.user
+share/
+
+# Database files (if contains sensitive data)
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
